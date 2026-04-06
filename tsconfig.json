@@ -1,14 +1,21 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "include": [
+    "src"
+, "src/lib"  ],
   "compilerOptions": {
     // File Layout
-    "rootDir": "src",
+    "rootDir": "./", //todo src
     "outDir": "dist/",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
+    "module": "ESNext", //todo nodenext prisma
+    "target": "ES2023", //todo esnext prisma
     "types": ["node"],
     // For nodejs:
     // "lib": ["esnext"],
@@ -40,5 +47,9 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "moduleResolution": "bundler", //todo prisma
+    "esModuleInterop": true, //todo prisma
+    "ignoreDeprecations": "6.0" //todo prisma
   }
+
 }
